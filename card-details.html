@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card-Details</title>
+    <link rel="stylesheet" href="card-details.css">
+    <link rel="stylesheet" href="card-details-mobile.css">
+</head>
+<body>
+    <section class="section-left">
+        <div id="section1-background">
+            <img src="conteudo/bg-main-desktop.png" alt="background-desktop" class="desktop-back">
+        </div>
+        <div class="cartao-logo">
+            <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+        </div>
+
+        <div class="cartao front"><!--Parte da frente do cartão-->
+            <img src="conteudo/bg-card-front.png" alt="cartao-front">
+            <p id="textNumero" class="cartaotxt numero">0000 0000 0000 0000</p>
+            <p id='textNome' class="cartaotxt dono-nome">GABRIEL GIATTI</p>
+            <p class="cartaotxt validade"><span id='textMes'>00</span>/<span id="textAno" >00</span> </p>
+        </div>
+
+        <div class="cartao back"><!--Parte de trás do cartão-->
+            <img src="conteudo/bg-card-back.png" alt="cartao-back">
+            <p id="textCVC" class="cartaotxt backcode">000</p>
+        </div>
+
+        <div id="loading"></div>
+
+    </section>
+                              <!--------------------BOTÕES------------------------->
+    <section class="section-right" id="sectionRightHTML">
+
+        <div>
+            <p class="infoText">Nome do titular do cartão</p>
+            <input id="botaoTitular" class="inputs titular" type="text" placeholder="ex. Gabriel Giatti" maxlength="24">
+        </div>
+
+        <div>
+            <p class="infoText">Numero do cartão</p>
+            <input id="botaoCardNum" class="inputs numero-cartao" type="text" placeholder="ex. 1234 5678 9123 0000">
+        </div>
+
+        <div>
+            <p class="infoText">Exp. Data (MM/YY)<span class="cvcText"> CVC</span></p> 
+            <input id="botaoMes" class="inputs data-mes" type="number" class="inputs mes" placeholder="MM" min="1" max="12">
+            <input id="botaoAno" class="inputs data-ano" type="number" class="inputs ano" placeholder=" AA" >
+            <input id="botaoCVC" class="inputs cvc" type="number" placeholder="ex. 000">
+            <p id="erromsg">teste</p>
+        </div>
+
+        <input class="confirmar" type="button" value="Confirmar" onclick="confirmar()" id="confirmar">
+
+        <div id="dotContainer"><!--simbolo de carregamento-->
+            <div class="dot d1"></div>
+            <div class="dot d2"></div>
+            <div class="dot d3"></div>
+        </div>
+
+    </section>
+                                        <!--Após a confirmação-->
+    <section>
+        <div class="finalizacao-container" id="finalizacaoContainer">
+            <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+            <div>
+                <h1>MUITO OBRIGADO!</h1>
+                <p>Seus dados foram adcionados</p>
+            </div>
+            <input type="button" value="Continuar">
+        </div>
+    </section>
+
+
+
+    <script src="card-details.js"></script>
+</body>
+</html>

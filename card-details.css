@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Space+Grotesk:wght@500&display=swap');
+/*font-family: 'Space Grotesk';*/
+
+body{
+    max-width: 1600px;
+    max-height: 900px;
+    margin: 0px;
+    display: flex;
+    position: fixed; top: 0; left: 0; /*Tirar a barra de scroll do site*/
+    
+}
+.desktop-back{
+    height: 940px;
+    width: 100%;
+}
+.cartao-logo{
+    position: absolute;
+    top: 185px;
+    left: 130px;
+    z-index: 1; /*Seria tipo as camadas, quando maior o numero, maior ele na hierarquia, ou seja vai aparecer acima dos outros*/
+}
+.front{
+    position: absolute;
+    top: 160px;
+    left: 95px;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.206);
+    width: 446px;
+    height: 245px;
+    border-radius: 10px;
+}
+    .cartaotxt{
+        z-index: 1;
+        color: white;
+        font-family: 'Space Grotesk';
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+        .numero{
+            position: absolute;
+            top: 115px;
+            left: 50px;
+            font-size: 28px;
+        }
+        .validade{
+            position: absolute;
+            top: 185px;
+            left: 355px;
+            color: rgba(255, 255, 255, 0.633);
+        }
+        .dono-nome{
+            position: absolute;
+            top: 185px;
+            left: 40px;
+            color: rgba(255, 255, 255, 0.633);
+        }
+.back{
+    position: absolute;
+    top: 440px;
+    left: 190px;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.206);
+    width: 446px;
+    height: 245px;
+    border-radius: 10px;
+}
+    .backcode{
+        position: relative;
+        top: -155px;
+        left: 350px;
+        color: rgba(255, 255, 255, 0.633);
+    }
+
+/*-------Section da direita-------*/
+
+.section-right{
+    visibility: show;
+    position: relative;
+    top: 230px;
+    left: 450px;
+
+
+    width: 550px;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+    .inputs{
+        width: 350px;
+        height: 50px;
+        border-radius: 10px;
+        border-color: rgba(0, 0, 0, 0.258);
+        font-size: 18px;
+        text-indent: 13px;
+        letter-spacing: 3px;
+
+    } 
+        ::placeholder{
+            color: rgba(0, 0, 0, 0.358);
+            text-indent: 13px; /*regula a distancia da escrita dentro do input. Nesse caso é o placeholder*/
+        }
+        .infoText{
+            font-size: 15px;
+            margin-bottom: 7px;
+            font-family: 'Space Grotesk';
+            color: rgb(20, 9, 28);
+            letter-spacing: 2px;
+        }
+        .data-mes{
+            width: 80px;
+        }
+        .data-ano{
+            width: 80px;
+            margin-left: 7px;
+        }
+        .cvc{
+            margin-left: 20px;
+            width: 140px;
+        }
+            .cvcText{
+                margin-left: 37px;
+            }
+        .confirmar{
+            width: 360px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-family: 'Space Grotesk';
+            color: white;
+            background-color: rgb(34, 9, 48);
+            cursor: pointer;
+        }
+            .confirmar:hover{
+                transform: scale(1.1);
+            }
+
+    #erromsg{
+        visibility: hidden;
+        color: red;
+        font-size: 16px;
+        font-family: 'Space Grotesk';
+        margin: 0;
+    }
+
+#loading {
+  display: none;
+  border: 8px solid #cdcdcd82; 
+  border-top: 8px solid rgb(34, 9, 48); 
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  animation: spin 1s linear infinite; /* animação que faz o círculo girar */
+  
+  position: absolute; 
+  left: 800px;
+  top: 400px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*Após a confirmação*/
+
+#finalizacaoContainer{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+
+    position: absolute;
+    top: 335px;
+    left: 930px;
+}
+#finalizacaoContainer h1{
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+#finalizacaoContainer P{
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: -5px;
+}
+#finalizacaoContainer input{
+    width: 360px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+    color: white;
+    background-color: rgb(34, 9, 48);
+}
+#finalizacaoContainer input:hover{
+    transform: scale(1.1);
+}
